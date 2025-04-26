@@ -25,3 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+window.addEventListener("resize", function () {
+    const nav = document.querySelector(".nav");
+    if (window.innerWidth < 600) {
+        nav.classList.add("mobile-nav");
+    } else {
+        nav.classList.remove("mobile-nav");
+    }
+});
+
+document.querySelectorAll(".nav a").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        document.getElementById(targetId).scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+});

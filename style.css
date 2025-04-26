@@ -198,3 +198,59 @@ body {
 .contato {
     color:rgb(152, 240, 12)
 }
+
+/* Configuração básica para imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Ajuste no layout da navegação */
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav ul li {
+    margin: 5px;
+}
+
+/* Layout responsivo para a galeria */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+/* Ajuste de tamanho do texto */
+h1, h2, p {
+    font-size: calc(1rem + 1vw);
+}
+
+form {
+    max-width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
